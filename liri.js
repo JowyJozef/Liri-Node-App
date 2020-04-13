@@ -1,3 +1,7 @@
+// I cant get it to work...NEED HELP!!
+
+
+
 //Grab data from keys.js
 require("dotenv").config();
 var keys = require("./keys.js");
@@ -76,7 +80,7 @@ function spotifySong(song){
 }
 
 function omdbData(movie){
-  var omdbURL = 'http://www.omdbapi.com/?t=' + movie + '&plot=short&tomatoes=true';
+  var omdbURL = 'http://www.omdbapi.com/?t=' + movie + '&apikey=' + omdbKey + '&plot=short&tomatoes=true';
 
   request(omdbURL, function (error, response, body){
     if(!error && response.statusCode == 200){
